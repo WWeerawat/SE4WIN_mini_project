@@ -1,0 +1,75 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """userID"""
+  uid: Int!
+
+  """username"""
+  name: String!
+}
+
+type Task {
+  id: Float!
+  name: String!
+  desc: String
+}
+
+type Role {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  users: [User!]!
+  user(id: Int!): User!
+  tasks: [Task!]!
+  task(id: Int!): Task!
+  role(id: Int!): Role!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+  createTask(createTaskInput: CreateTaskInput!): Task!
+  updateTask(updateTaskInput: UpdateTaskInput!): Task!
+  removeTask(id: Int!): Task!
+  createRole(createRoleInput: CreateRoleInput!): Role!
+  updateRole(updateRoleInput: UpdateRoleInput!): Role!
+  removeRole(id: Int!): Role!
+}
+
+input CreateUserInput {
+  """Example field (placeholder)"""
+  uid: Int!
+}
+
+input UpdateUserInput {
+  """Example field (placeholder)"""
+  uid: Int
+  id: Int!
+}
+
+input CreateTaskInput {
+  name: String!
+  desc: String
+}
+
+input UpdateTaskInput {
+  name: String
+  desc: String
+  id: Int!
+}
+
+input CreateRoleInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateRoleInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
