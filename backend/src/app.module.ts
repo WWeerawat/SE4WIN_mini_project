@@ -7,6 +7,8 @@ import { UserModule } from './user/user.module';
 import { TaskModule } from './task/task.module';
 import { RoleModule } from './role/role.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PriorityModule } from './priority/priority.module';
+import { CategoryModule } from './category/category.module';
 import typeorm_config from './config/orm.config';
 
 @Module({
@@ -16,6 +18,8 @@ import typeorm_config from './config/orm.config';
     UserModule,
     TaskModule,
     RoleModule,
+    PriorityModule,
+    CategoryModule,
   ],
   controllers: [AppController],
   providers: [AppService],

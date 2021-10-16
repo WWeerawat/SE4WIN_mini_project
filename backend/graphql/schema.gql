@@ -58,7 +58,7 @@ input CreateTaskInput {
 }
 
 input UpdateTaskInput {
-  name: String
+  name: String!
   desc: String
   id: Int!
 }
