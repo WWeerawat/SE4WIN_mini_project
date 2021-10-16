@@ -5,11 +5,15 @@ import Navbar_bootstrap from "./components/Navbar_bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
-  return (
+
+const [tasks, setTasks] = useState([]);
+
+  return (  
     <div>
       <Navbar_bootstrap />
       <div className="toDoListBox">
-        <Header />
+        <Header 
+        />
       </div>
     </div>
   );
