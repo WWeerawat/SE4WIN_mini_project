@@ -20,14 +20,14 @@ export class TaskService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} task`;
+    return this.taskRepository.findOne(id);
   }
 
   update(id: number, updateTaskInput: UpdateTaskInput) {
-    return `This action updates a #${id} task`;
+    return this.taskRepository.update(id, updateTaskInput);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} task`;
+    return this.taskRepository.delete(id);
   }
 }
