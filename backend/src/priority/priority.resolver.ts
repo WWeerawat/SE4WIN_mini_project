@@ -15,7 +15,7 @@ export class PriorityResolver {
     return this.priorityService.create(createPriorityInput);
   }
 
-  @Query(() => [Priority], { name: 'priority' })
+  @Query(() => [Priority], { name: 'priorities' })
   findAll() {
     return this.priorityService.findAll();
   }

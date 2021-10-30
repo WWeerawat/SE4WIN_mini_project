@@ -10,15 +10,20 @@ type User {
   name: String!
 }
 
-type Task {
+type Category {
   id: Float!
   name: String!
-  desc: String
 }
 
-type Role {
-  """Example field (placeholder)"""
-  exampleField: Int!
+type Priority {
+  id: Float!
+  name: String!
+}
+
+type Task {
+  id: Float!
+  title: String!
+  desc: String
 }
 
 type Query {
@@ -26,7 +31,9 @@ type Query {
   user(id: Int!): User!
   tasks: [Task!]!
   task(id: Int!): Task!
-  role(id: Int!): Role!
+  priorities: [Priority!]!
+  priority(id: Int!): Priority!
+  category(id: Int!): Category!
 }
 
 type Mutation {
@@ -36,9 +43,12 @@ type Mutation {
   createTask(createTaskInput: CreateTaskInput!): Task!
   updateTask(updateTaskInput: UpdateTaskInput!): Task!
   removeTask(id: Int!): Task!
-  createRole(createRoleInput: CreateRoleInput!): Role!
-  updateRole(updateRoleInput: UpdateRoleInput!): Role!
-  removeRole(id: Int!): Role!
+  createPriority(createPriorityInput: CreatePriorityInput!): Priority!
+  updatePriority(updatePriorityInput: UpdatePriorityInput!): Priority!
+  removePriority(id: Int!): Priority!
+  createCategory(createCategoryInput: CreateCategoryInput!): Category!
+  updateCategory(updateCategoryInput: UpdateCategoryInput!): Category!
+  removeCategory(id: Int!): Category!
 }
 
 input CreateUserInput {
@@ -63,12 +73,21 @@ input UpdateTaskInput {
   id: Int!
 }
 
-input CreateRoleInput {
+input CreatePriorityInput {
+  name: String!
+}
+
+input UpdatePriorityInput {
+  name: String!
+  id: Int!
+}
+
+input CreateCategoryInput {
   """Example field (placeholder)"""
   exampleField: Int!
 }
 
-input UpdateRoleInput {
+input UpdateCategoryInput {
   """Example field (placeholder)"""
   exampleField: Int
   id: Int!
